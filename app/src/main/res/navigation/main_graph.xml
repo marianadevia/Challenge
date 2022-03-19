@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/breedFragment">
+
+    <fragment
+        android:id="@+id/breedFragment"
+        android:name="com.example.mobdevchallenge.ui.BreedFragment"
+        android:label="fragment_breed"
+        tools:layout="@layout/fragment_breed" >
+        <action
+            android:id="@+id/action_breedFragment_to_picsFragment"
+            app:destination="@id/picsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/picsFragment"
+        android:name="com.example.mobdevchallenge.ui.PicsFragment"
+        android:label="fragment_pics"
+        tools:layout="@layout/fragment_pics" />
+</navigation>
