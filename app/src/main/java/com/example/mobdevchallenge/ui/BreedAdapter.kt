@@ -41,6 +41,5 @@ class BreedAdapter(
         fun onItemClick(data: String)
     }
 
-
 }
 

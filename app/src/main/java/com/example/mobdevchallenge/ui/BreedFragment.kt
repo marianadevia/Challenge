@@ -41,7 +41,6 @@ class BreedFragment : Fragment(R.layout.fragment_breed), BreedAdapter.OnItemClic
                     breeds.clear()
                     breeds.addAll(it.data.message)
 
-                    //esto no se si va
                     if(::breedAdapter.isInitialized) {
                         breedAdapter.updateDataSet(breeds)
                     }
@@ -61,7 +60,6 @@ class BreedFragment : Fragment(R.layout.fragment_breed), BreedAdapter.OnItemClic
     }
 
     override fun onItemClick(data: String) {
-        Toast.makeText(this.context, data, Toast.LENGTH_SHORT).show()
         val action =  BreedFragmentDirections.actionBreedFragmentToPicsFragment(data)
         findNavController().navigate(action)
     }
