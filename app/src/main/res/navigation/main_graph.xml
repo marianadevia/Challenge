@@ -18,5 +18,9 @@
         android:id="@+id/picsFragment"
         android:name="com.example.mobdevchallenge.ui.PicsFragment"
         android:label="fragment_pics"
-        tools:layout="@layout/fragment_pics" />
+        tools:layout="@layout/fragment_pics" >
+        <argument
+            android:name="breedName"
+            app:argType="string" />
+    </fragment>
 </navigation>

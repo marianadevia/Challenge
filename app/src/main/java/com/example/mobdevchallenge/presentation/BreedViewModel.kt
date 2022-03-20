@@ -17,7 +17,18 @@ class BreedViewModel(private val repo: BreedRepository) : ViewModel() {
             emit(Resource.Failure(e))
         }
     }
+
+    fun fetchBreedListImages(breed: String) = liveData(Dispatchers.IO) {
+        emit(Resource.Loading())
+        try {
+            emit(Resource.Success(repo.getBreedImages(breed)))
+        }catch (e:Exception){
+            emit(Resource.Failure(e))
+        }
+    }
 }
+
+
 
 class BreedViewModelFactory(private val repo: BreedRepository): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

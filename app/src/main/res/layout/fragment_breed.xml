@@ -23,6 +23,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/pic_item"/>
+        tools:listitem="@layout/breed_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

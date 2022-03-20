@@ -12,8 +12,8 @@ interface WebService {
     @GET("/api/breeds/list")
     suspend fun getBreedResponse(): BreedResponse
 
-    /*@GET("/api/breeds/list")
-    suspend fun getBreedResponse(@Path () ): BreedResponse*/
+    @GET("/api/breed/{breed}/images")
+    suspend fun getBreedImages(@Path ("breed") breed:String ): BreedResponse
 
 }
 
